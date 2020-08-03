@@ -45,11 +45,11 @@ parallel chrome:{
 }
 
 
-node {
-    notify("Deploy to staging?")
-}
+//node {
+//    notify("Deploy to staging?")
+//}
 
-input 'Deploy to staging?'
+//input 'Deploy to staging?'
 
 stage name: 'Deploy', concurrency: 1
 node{
