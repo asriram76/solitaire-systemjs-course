@@ -2,7 +2,8 @@ stage 'CI'
 node {
 
     env.NODEJS_HOME = "${tool 'node14'}"
-    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+    env.DOCKER_HOME = "${tool 'docker19'}"
+    env.PATH="${env.NODEJS_HOME}/bin:${env.DOCKER_HOME}/bin:${env.PATH}"
     sh "node -v"
 
     checkout scm
